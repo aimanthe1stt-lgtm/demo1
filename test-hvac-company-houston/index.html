@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Test HVAC Company - Houston, TX</title>
+    <style>
+        :root {
+            --primary-color: #0056b3; /* Darker blue */
+            --secondary-color: #e0f2f7; /* Light blue */
+            --accent-color: #28a745; /* Green for call to action */
+            --text-color: #333;
+            --light-text-color: #666;
+            --background-color: #f8f9fa; /* Light grey */
+            --white: #fff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Mobile-first: Tap-to-call button */
+        .tap-to-call {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-align: center;
+            padding: 15px 0;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Hide on larger screens */
+        @media (min-width: 768px) {
+            .tap-to-call {
+                display: none;
+            }
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0; /* No rounded corners for hero */
+            box-shadow: none;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        /* Services Section */
+        .services ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .services li {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Booking Section */
+        .booking-section .booking-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .booking-section .booking-preview button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .booking-section .booking-preview button:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .booking-section .note {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--light-text-color);
+        }
+
+        .booking-section .call-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 0 auto;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .booking-section .call-button:hover {
+            background-color: #218838; /* Darker green */
+        }
+
+        /* Service Area */
+        .service-area p {
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="tel:+15550101234" class="tap-to-call">Call Now: 555-010-1234</a>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Test HVAC Company</h1>
+            <p>Serving Houston, TX</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Air Conditioning Repair</li>
+                <li>Heating System Installation</li>
+                <li>HVAC Maintenance</li>
+                <li>Ductwork Services</li>
+                <li>Thermostat Replacement</li>
+                <li>Indoor Air Quality Solutions</li>
+            </ul>
+        </section>
+
+        <div class="trust-bar">
+            4.8 stars on Google from 42 reviews
+        </div>
+
+        <section class="booking-section">
+            <h2>Sample preview - online booking</h2>
+            <p class="note">This is a preview of what online booking could look like. No data is collected here.</p>
+            <div class="booking-preview">
+                <button>Mon, Jan 1 @ 9:00 AM</button>
+                <button>Mon, Jan 1 @ 11:00 AM</button>
+                <button>Tue, Jan 2 @ 1:00 PM</button>
+                <button>Tue, Jan 2 @ 3:00 PM</button>
+                <button>Wed, Jan 3 @ 9:30 AM</button>
+                <button>Wed, Jan 3 @ 1:30 PM</button>
+            </div>
+            <p class="note">Online booking would go live on the real site.</p>
+            <a href="tel:+15550101234" class="call-button">Or Call Us Instead</a>
+        </section>
+
+        <section class="service-area">
+            <h2>Service Area</h2>
+            <p>Proudly serving Houston, Texas and surrounding areas.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Test HVAC Company</p>
+        <p>555-010-1234</p>
+        <p>Sample website prepared by AI Man the First</p>
+    </footer>
+
+</body>
+</html>
